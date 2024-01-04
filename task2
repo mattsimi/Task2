@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
+    <title>Car Information Form</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Styles -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -24,6 +30,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px;
+            background-color: #333;
         }
 
         nav a {
@@ -40,32 +47,6 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        fieldset {
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-        }
-
-        legend {
-            font-weight: bold;
-            color: #333;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        input,
-        select,
-        textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
-
         .buttonsDiv {
             display: flex;
             justify-content: space-between;
@@ -74,140 +55,82 @@
         .buttonDiv {
             width: 48%;
         }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        footer div {
-            margin-bottom: 15px;
-        }
-
-        footer ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        footer a {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        .mapDiv img {
-            max-width: 100%;
-            height: auto;
-        }
     </style>
 </head>
+
 <body>
     <header>
-        <h1>Contact Us</h1>
+        <h1>Car Information Form</h1>
         <nav>
-            <a href="index.html">Home</a>
-          
+            <a href="#home">Home</a>
+            <a href="#form">Form</a>
         </nav>
     </header>
 
-    <form action="mailto:asdf@qwerty.com" method="post" enctype="text/plain" class="contactPage">
+    <div id="home" class="container mt-4">
+        <h2>Welcome to our Car Information Website!</h2>
+        <p>Here one will find a form which needs to be filled before proceeding.</p>
+    </div>
+
+    <form id="form" action="#" method="post" class="container mt-4">
+        <!-- Car Information Form -->
         <fieldset>
-            <legend>Personal Details</legend>
-            <div>
-                <label for="firstNameInput">First Name</label>
-                <input type="text" name="firstName" id="firstNameInput" placeholder="Joe">
-            </div>
+            <legend>Car Owner Information</legend>
+<div class="mb-3">
+    <label for="ownerFirstNameInput" class="form-label">First Name</label>
+    <input type="text" class="form-control" id="ownerFirstNameInput" placeholder="Enter first name">
+</div>
 
-            <div>
-                <label for="lastNameInput">Last Name</label>
-                <input type="text" name="lasttName" id="lastNameInput" placeholder="Borg">
-            </div>
+<div class="mb-3">
+    <label for="ownerLastNameInput" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="ownerLastNameInput" placeholder="Enter last name">
+</div>
 
-            <div>
-                <p class="ageTitle">Age</p>
-                <input type="radio" name="age" id="age1" value="1">
-                <label for="age1">15-18</label>
-                <br>
-                <input type="radio" name="age" id="age2" value="2">
-                <label for="age2">19-25</label>
-                <br>
-                <input type="radio" name="age" id="age3" value="3">
-                <label for="age3">26-40</label>
-                <br>
-                <input type="radio" name="age" id="age4" value="4">
-                <label for="age4">41+</label>
-                <br>
+<div class="mb-3">
+    <label for="ownerAgeInput" class="form-label">Age</label>
+    <input type="number" class="form-control" id="ownerAgeInput" placeholder="Enter age">
+</div>
+
+            <div class="mb-3">
+                <label for="emailInput" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="emailInput" placeholder="Enter email address">
             </div>
         </fieldset>
 
         <fieldset>
-            <legend>Contact Information</legend>
-            <div>
-                <label for="emailInput">Email Address</label>
-                <input type="email" name="email" id="emailInput" placeholder="joeborg@gmail.com">
-            </div>
-
-            <div>
-                <label for="phoneInput">Phone Number</label>
-                <input type="tel" name="phone" id="phoneInput" placeholder="1234 5678" pattern="[0-9]{4} [0-9]{4}">
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>Message Details</legend>
-            <div>
-                <label for="departmentInput">Department</label>
-                <select name="department" id="departmentInput">
-                    <option value=""></option>
-                    <option value="customer-support">Customer Support</option>
-                    <option value="technical-support">Technical Support</option>
+            <legend>Car Details</legend>
+            <div class="mb-3">
+                <label for="carTypeSelect" class="form-label">Type of Car</label>
+                <select class="form-select" id="carTypeSelect">
+                    <option value="" disabled selected>Select car type</option>
+                    <option value="petrol">Petrol</option>
+                    <option value="diesel">Diesel</option>
+                    <option value="hybrid">Hybrid</option>
                 </select>
             </div>
 
-            <div>
-                <label for="subjectInput">Subject</label>
-                <input type="text" name="subject" id="subjectInput" placeholder="Subject">
-            </div>
-
-            <div>
-                <label for="messageInput">Message</label>
-                <textarea name="message" id="messageInput" cols="30" rows="10" placeholder="Message Content"></textarea>
+            <div class="mb-3">
+                <label for="carMakeInput" class="form-label">Make of Car</label>
+                <input type="text" class="form-control" id="carMakeInput" placeholder="Enter make of car">
             </div>
         </fieldset>
 
         <div class="buttonsDiv">
             <div class="buttonDiv">
-                <button type="reset">Cancel</button>
+                <button type="reset" class="btn btn-secondary">Cancel</button>
             </div>
 
             <div class="buttonDiv">
-                <button type="submit">Send</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>
     </form>
 
-    <footer>
-        <div>
-            <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li><a href="#">Important Documents</a></li>
-                <li><a href="#">Legal Notice</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-            </ul>
-        </div>
-        <div class="mapDiv">
-            <img src="https://cdn.ttgtmedia.com/rms/onlineimages/screenshot_1_google_maps_on_desktop_f_mobile.jpg" alt="Google Maps image">
-        </div>
-    </footer>
+    <!-- Bootstrap JS and Popper.js (required for Bootstrap components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your custom JavaScript code can go here -->
+
 </body>
+
 </html>
