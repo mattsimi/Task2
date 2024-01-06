@@ -55,10 +55,41 @@
         .buttonDiv {
             width: 48%;
         }
+
+        #header-image {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #header-image img {
+            width: 64px;
+            height: 64px;
+        }
+
+        #support-info {
+            text-align: center;
+            margin: 20px;
+        }
+
+        #support-info h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #contact-info {
+            text-align: center;
+            margin: 20px;
+        }
+
+        #contact-info p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
     </style>
 </head>
 
 <body>
+    
 
     <div id="Storage" class="container mt-4">
         <header>
@@ -72,52 +103,50 @@
                 <a href="benefits.html">Benefits</a>
             </nav>
         </header>
-        <h2>Welcome to our Cloud Storage Website!</h2>
-        <p>Here one will find a form which needs to be filled before proceeding.</p>
-    </div>
-    
-    <body>
-        <Storage id="Storage" action="#" method="post" class="container mt-4">
-            <!-- Cloud Information Form -->
-            <fieldset>
-                <legend>Plans</legend>
-    <div class="mb-3">
-                <legend>Plans Details</legend>
-                <div class="mb-3">
-                    <label for="carTypeSelect" class="form-label">Plan options to choose from </label>
-                    <select class="form-select" id="carTypeSelect"> 
-                        <option value="" disabled selected>Select Storage</option>
-                        <option value="1tb">1tb</option>
-                        <option value="2tb">2tb</option>
-                        <option value="3tb">3tb</option>
-                    </select>
-                </div>
-    
-                <div class="mb-3">
-                    <label for="typeOfStorage" class="form-label">Type of storage</label>
-                    <input type="text" class="form-control" id="typeInput" placeholder="Enter what your storage will be used for">
-                </div>
-            </fieldset>
-    
-            <div class="buttonsDiv">
-                <div class="buttonDiv">
-                    <button type="reset" class="btn btn-secondary">Cancel</button>
-                </div>
-    
-                <div class="buttonDiv">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
-        </Storage>
 
+            <script>
+                // Create and append the Support Icon
+                var headerImage = document.createElement("div");
+                headerImage.id = "header-image";
+                var supportIcon = document.createElement("img");
+                supportIcon.src = "https://ssl.gstatic.com/subscriptions/img/G1_Rainbow_Icons_support-64_f258e301dcbb9a92a8b8f70b16967378.svg";
+                supportIcon.alt = "Support Icon";
+                headerImage.appendChild(supportIcon);
+                document.body.appendChild(headerImage);
+        
+                // Create and append the "Get help from the experts" heading
+                var supportInfo = document.createElement("div");
+                supportInfo.id = "support-info";
+                var heading = document.createElement("h2");
+                heading.textContent = "Get help from the experts";
+                supportInfo.appendChild(heading);
+                document.body.appendChild(supportInfo);
+        
+                // Create and append the contact information
+                var contactInfo = document.createElement("div");
+                contactInfo.id = "contact-info";
+                var contactLines = [
+                    "Contact us",
+                    "Phone number: +356 79666666 or 21333333",
+                    "Email: support.cloud@email.com",
+                    "Find us on Facebook"
+                ];
+        
+                for (var i = 0; i < contactLines.length; i++) {
+                    var paragraph = document.createElement("p");
+                    paragraph.textContent = contactLines[i];
+                    contactInfo.appendChild(paragraph);
+                }
+        
+                document.body.appendChild(contactInfo);
+            </script>
+        
+        </body>
 
-   
-
-
-    <!-- Bootstrap JS and Popper.js (required for Bootstrap components) -->
+        
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Your custom JavaScript code can go here -->
 
 </body>
 

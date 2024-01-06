@@ -55,10 +55,58 @@
         .buttonDiv {
             width: 48%;
         }
+
+        #header-image {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #header-image img {
+            width: 150px;
+            height: 150px;
+        }
+
+        #storage-info {
+            text-align: center;
+            margin: 20px;
+        }
+
+        #storage-info img {
+            width: 100px;
+            height: 100px;
+        }
+
+        #space-box {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #007bff;
+            border-radius: 10px;
+        }
+
+        #space-box img {
+            width: 100px;
+            height: 100px;
+        }
+
+        #blue-button {
+            text-align: center;
+            margin: 20px;
+        }
+
+        #blue-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
     </style>
 </head>
 
 <body>
+    
 
     <div id="Storage" class="container mt-4">
         <header>
@@ -71,53 +119,29 @@
                 <a href="support.html">Support</a>
                 <a href="benefits.html">Benefits</a>
             </nav>
+            
         </header>
-        <h2>Welcome to our Cloud Storage Website!</h2>
-        <p>Here one will find a form which needs to be filled before proceeding.</p>
+        
+        <div id="storage-info">
+            <img src="https://ssl.gstatic.com/subscriptions/img/G1_Rainbow_Icons_storage-64_e5e53313f10d081dfd0c4756d2f2879e.svg"
+                alt="Smart Way Icon">
+            <h2>You've got 15 GB standard of storage</h2>
+            <p>Right now your Email, Drive, Photos, and Phone are being stored but will soon run out.</p>
+        </div>
+
+        <div id="space-box">
+            <img src="https://ssl.gstatic.com/subscriptions/img/G1_free_up_space_LIGHTMODE_724a55ec07e993d5345ce9f3d6961d74.svg"
+                alt="Smart Way Icon">
+            <p>The smart way of getting your space back</p>
+        </div>
+
+        <div id="blue-button">
+            <a href="plans.html">Get More Storage</a>
+        </div>
     </div>
-    
-    <body>
-        <Storage id="Storage" action="#" method="post" class="container mt-4">
-            <!-- Cloud Information Form -->
-            <fieldset>
-                <legend>Storage</legend>
-    <div class="mb-3">
-                <legend>Storage Details</legend>
-                <div class="mb-3">
-                    <label for="carTypeSelect" class="form-label">Type of Car</label>
-                    <select class="form-select" id="carTypeSelect"> 
-                        <option value="" disabled selected>Select Storage</option>
-                        <option value="1tb">1tb</option>
-                        <option value="2tb">2tb</option>
-                        <option value="3tb">3tb</option>
-                    </select>
-                </div>
-    
-                <div class="mb-3">
-                    <label for="typeOfStorage" class="form-label">Type of storage</label>
-                    <input type="text" class="form-control" id="typeInput" placeholder="Enter what your storage will be used for">
-                </div>
-            </fieldset>
-    
-            <div class="buttonsDiv">
-                <div class="buttonDiv">
-                    <button type="reset" class="btn btn-secondary">Cancel</button>
-                </div>
-    
-                <div class="buttonDiv">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
-        </Storage>
 
-
-   
-
-
-    <!-- Bootstrap JS and Popper.js (required for Bootstrap components) -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Your custom JavaScript code can go here -->
 
 </body>
 
