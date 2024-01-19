@@ -8,39 +8,23 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="style.css">
     <!-- Styles -->
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            background-color: #333;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #fff;
-            margin: 0 15px;
-        }
+        
 
         .container {
             text-align: center;
+        }
+
+        #header-image {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #header-image img {
+            width: 150px;
+            height: 150px;
         }
 
         .plan-box {
@@ -71,7 +55,7 @@
 <body>
 
     <!-- Plans Section -->
-    <div id="Plans" class="container mt-4">
+    <div id="Plans" class="container-fluid p-0">
         <!-- Header Section -->
         <header>
             <h1>More Space, Extra Benefits</h1>
@@ -85,8 +69,14 @@
             </nav>
         </header>
 
-        <!-- Main Content Section -->
-        <h2>Upgrade for More Storage</h2>
+        <!-- Image Section -->
+        <div id="header-image" class="container">
+            <img src="data:image/png;base64,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" alt="Storage Image">
+         <!-- Main Content Section -->
+         <h2>Upgrade for More Storage</h2>
+        </div>
+
+       
 
         <!-- Plans Display Section -->
         <div class="container">

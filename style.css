@@ -1,17 +1,18 @@
+        /* Global styling for the entire page */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
         }
-
+        /* Header styling */
         header {
             background-color: #333;
             color: #fff;
             padding: 10px;
             text-align: center;
         }
-
+        /* Navigation styling */
         nav {
             display: flex;
             justify-content: space-between;
@@ -19,26 +20,11 @@
             padding: 10px;
             background-color: #333;
         }
-
+        
         nav a {
             text-decoration: none;
             color: #fff;
             margin: 0 15px;
         }
 
-        form {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .buttonsDiv {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .buttonDiv {
-            width: 48%;
-        }
+        
